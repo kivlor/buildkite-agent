@@ -2,7 +2,9 @@ all: help
 
 .PHONY: help
 help:
-	@echo "start: start deno server"
+	@echo "start: start then deno agent"
+	@echo "logs: follow deno agent logs"
+	@echo "stop: stop the deno agent"
 
 .PHONY: build
 build:
