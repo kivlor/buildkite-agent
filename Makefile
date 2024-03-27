@@ -10,13 +10,13 @@ build:
 
 .PHONY: start
 start:
-	docker run -d -t --rm --name buildkite-agent --env-file .env kivlor/deno-agent:latest start
+	docker run -d -t --rm --name deno-agent --env-file .env kivlor/deno-agent:latest start
 
 .PHONY: stop
 stop:
-	docker stop buildkite-agent
+	docker stop deno-agent
 
 .PHONY: logs
 logs:
-	docker logs -f buildkite-agent
+	docker logs -f deno-agent
 
