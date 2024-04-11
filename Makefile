@@ -2,13 +2,14 @@ all: help
 
 .PHONY: help
 help:
+	@echo "build: build a new image"
 	@echo "start: start then deno agent"
 	@echo "logs: follow deno agent logs"
 	@echo "stop: stop the deno agent"
 
 .PHONY: build
 build:
-	docker build . -t kivlor/deno-agent:latest
+	docker build . --no-cache -t kivlor/deno-agent:latest
 
 .PHONY: start
 start:
